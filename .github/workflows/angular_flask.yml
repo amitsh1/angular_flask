@@ -91,5 +91,5 @@ jobs:
         with:
           context: .
           file: ./dockerfiles/Dockerfile.puppeteer  
-          tags: amitsh1/myapp:latest
+          tags: user/app:latest
           push: true        
