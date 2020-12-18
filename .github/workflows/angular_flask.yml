@@ -36,7 +36,7 @@ name: build puppeteer
 on:
   push:
     paths:
-      - ./dockerfiles/Dockerfile.puppeteer  
+      - dockerfiles/Dockerfile.puppeteer  
 # on:
 #   paths:
 #     - './dockerfiles/Dockerfile.puppeteer  '
