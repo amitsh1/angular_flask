@@ -20,41 +20,15 @@ jobs:
           npm test
           ls
       -
-        name: save dist
-        uses: EndBug/add-and-commit@v5 # You can change this to use a specific version
+        name: push
+        uses: github-actions-x/commit@v2.7
         with:
-          # The arguments for the `git add` command (see the paragraph below for more info)
-          # Default: '.'
-          add: 'dist'
-      
-          # The name of the user that will be displayed as the author of the commit
-          # Default: author of the commit that triggered the run
-          author_name: amitshalev
-      
-          # The email of the user that will be displayed as the author of the commit
-          # Default: author of the commit that triggered the run
-          author_email: amit30005@gmail.com
-      
-          # Name of the branch to use, if different from the one that triggered the workflow
-          # Default: the branch that triggered the run
-          branch: master
-      
-          # The local path to the directory where your repository is located. You should use actions/checkout first to set it up
-          # Default: '.'
-          cwd: '.'
-      
-          # The message for the commit
-          # Default: 'Commit from GitHub Actions (name of the workflow)'
-          message: 'dist changed'
-      
-      
-          # Whether to push the commit and, if any, its tags to the repo (only `true` and `false` are accepted)
-          # Default: true
-          push: true
-      
-      
-        env:
-          # This is necessary in order to push a commit to the repo
-          GITHUB_TOKEN: ${{ secrets.CR_PAT }} # Leave this line unchanged
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: 'master'
+          commit-message: 'publish'
+          force-add: 'true'
+          files: dist/
+          name: amitshalev
+          email: amit30005@gmail.com
 
 
