@@ -91,5 +91,5 @@ jobs:
         with:
           context: .
           file: ./dockerfiles/Dockerfile.puppeteer  
-          tags: ${{ github.repository_owner }}/flask_angular:latest
+          tags: ${{ github.repository_owner }}/angular_flask:latest
           push: true        
