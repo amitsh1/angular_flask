@@ -31,11 +31,11 @@
 
 
 
-name: ci
+name: build puppeteer
 
 on:
-  push:
-    branches: master
+  paths:
+    - './dockerfiles/Dockerfile.puppeteer  '
 
 # jobs:
 #   login:
@@ -87,5 +87,5 @@ jobs:
         with:
           context: .
           file: ./dockerfiles/Dockerfile.puppeteer  
-          tags: amitshalev/myapp:latest
+          tags: amitsh1/myapp:latest
           push: true        
