@@ -1,4 +1,4 @@
 FROM buildkite/puppeteer:latest
 
 RUN npm i -g @angular/cli
-RUN echo "test"
+RUN echo "test1"
