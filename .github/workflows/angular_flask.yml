@@ -60,11 +60,7 @@ jobs:
           file: ./dockerfiles/Dockerfile.puppeteer          
           push: true
           tags: amitshalev/puppeteer:latest
-        run: docker push ${{ env.REGISTRY }}/myapp:latest  
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}          
-
-
-  
       
