@@ -91,5 +91,5 @@ jobs:
         with:
           context: .
           file: ./dockerfiles/Dockerfile.puppeteer  
-          tags: user/app:latest
+          tags: amitsh1/angular_flask/:latest
           push: true        
