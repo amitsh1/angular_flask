@@ -34,8 +34,12 @@
 name: build puppeteer
 
 on:
-  paths:
-    - './dockerfiles/Dockerfile.puppeteer  '
+  push:
+    branches: master
+
+# on:
+#   paths:
+#     - './dockerfiles/Dockerfile.puppeteer  '
 
 # jobs:
 #   login:
